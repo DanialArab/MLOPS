@@ -5,7 +5,7 @@ This repo documents my understanding of MLOps. The structure of my notes are as 
 # Table of content
 
 1. [Introduction](#1)
-    1. [What is MLOPS](#2)
+    1. [What is MLOps](#2)
     2. [Environment preparation](#3)
     3. [MLOps maturity model](#4)
     4. [Why do we need MLOps](#5)
@@ -20,6 +20,9 @@ This repo documents my understanding of MLOps. The structure of my notes are as 
 <a name="1"></a>
 ## 1. Introduction
 
+<a name="2"></b>
+### What is MLOps
+
 + MLOps is a set of best practises to put the machine learning model to production. 
 + The simplified version of an ML project is depicted in the following:
 
@@ -27,7 +30,7 @@ This repo documents my understanding of MLOps. The structure of my notes are as 
 
 In this course we will focus on the second (train) and third step (operate). 
 
-<a name="2"></b>
+<a name="3"></b>
 ### Environment preparation
 
 I set up my environemnt in my VM Ubuntu. I need to install:
