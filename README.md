@@ -13,6 +13,10 @@ This repo documents my understanding of MLOPS. The structure of my notes are as 
 2. [Experiment tracking and model management](#5)
 
 
+8. [Prerequisites (deployment and Docker)](#11)
+9. [Prerequisites (deployment and Docker)](#12)
+
+
 <a name="1"></a>
 ## 1. Introduction
 
@@ -20,9 +24,14 @@ This repo documents my understanding of MLOPS. The structure of my notes are as 
 <a name="5"></a>
 ## 2. Experiment tracking and model management
 
-
-Prerequisites (deployment and Docker) required to read before course:
+<a name="8"></a>
+## Prerequisites (deployment and Docker)
 
 https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp/05-deployment
 
 ![](https://raw.githubusercontent.com/DanialArab/images/main/MLOPS/Deployment.PNG)
+
+<a name="9"></a>
+## References
+
+https://github.com/DataTalksClub/mlops-zoomcamp
