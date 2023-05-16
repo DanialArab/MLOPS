@@ -52,11 +52,15 @@ Docker Compose is a tool for running multi-container applications on Docker defi
             wget https://github.com/docker/compose/releases/download/v2.18.0/docker-compose-linux-x86_64
             mv docker-compose-linux-x86_64 docker-compose
             chmod +x docker-compose (to make it executable)
-            nano .bashrc
+            nano .bashrc (to be able to access the soft folder, which contains the docker-compose, from anywhere I need to modify my PATH variable:)
                 export PATH="${HOME}/soft:${PATH}"
             source .bashrc
 
++ Clone the course repo 
 
+            git clone https://github.com/DataTalksClub/mlops-zoomcamp.git
+            cd mlops-zoomcamp/
+            
 
 
 <a name="6"></a>
