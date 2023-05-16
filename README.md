@@ -28,7 +28,7 @@ This repo documents my understanding of MLOps. The structure of my notes are as 
 In this course we will focus on the second (train) and third step (operate). 
 
 <a name="2"></b>
-### 2. Environment preparation
+### Environment preparation
 
 I set up my environemnt in my VM Ubuntu. I need to install:
 + Anaconda, for that:
