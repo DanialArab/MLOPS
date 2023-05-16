@@ -1,6 +1,6 @@
-# MLOPS
+# MLOps
 
-This repo documents my understanding of MLOPS. The structure of my notes are as follows:
+This repo documents my understanding of MLOps. The structure of my notes are as follows:
 
 # Table of content
 
@@ -19,6 +19,13 @@ This repo documents my understanding of MLOPS. The structure of my notes are as 
 
 <a name="1"></a>
 ## 1. Introduction
+
++ MLOps is a set of best practises to put the machine learning model to production. 
++ The simplified version of an ML project is depicted in the following:
+
+![](https://github.com/DanialArab/images/blob/main/MLOPS/ML%20project%20steps.png?raw=true)
+
+In this course we will focus on the second (train) and third step (deploy). 
 
 
 <a name="5"></a>
