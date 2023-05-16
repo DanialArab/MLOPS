@@ -6,10 +6,10 @@ This repo documents my understanding of MLOps. The structure of my notes are as 
 
 1. [Introduction](#1)
     1. [What is MLOPS](#2)
-    2. [MLOps maturity model](#3)
-    3. [Why do we need MLOps](#4)
+    2. [Environment preparation](#3)
+    3. [MLOps maturity model](#4)
+    4. [Why do we need MLOps](#5)
 
-2. [Environment preparation](#5)
 2. [Experiment tracking and model management](#6)
 
 
@@ -27,8 +27,8 @@ This repo documents my understanding of MLOps. The structure of my notes are as 
 
 In this course we will focus on the second (train) and third step (operate). 
 
-<a name="5"></a>
-## 2. Environment preparation
+<a name="2"></b>
+### 2. Environment preparation
 
 I set up my environemnt in my VM Ubuntu. I need to install:
 + Anaconda, for that:
