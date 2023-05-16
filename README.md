@@ -27,9 +27,23 @@ This repo documents my understanding of MLOps. The structure of my notes are as 
 
 In this course we will focus on the second (train) and third step (operate). 
 
-
 <a name="5"></a>
-## 2. Experiment tracking and model management
+## 2. Environment preparation
+
+I set up my environemnt in my VM Ubuntu. I need to install:
++ Anaconda, for that:
+        wget https://repo.anaconda.com/archive/Anaconda3-2023.03-1-Linux-x86_64.sh
+        bash Anaconda3-2023.03-1-Linux-x86_64.sh
+        
++ Docker
+        I already installed docker engine on my machine when I took Mosh's docker course
+        
++ Docker compose 
+        
+
+
+<a name="6"></a>
+## 3. Experiment tracking and model management
 
 <a name="8"></a>
 ## 8. Prerequisites (deployment and Docker)
