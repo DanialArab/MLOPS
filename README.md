@@ -25,7 +25,7 @@ This repo documents my understanding of MLOps. The structure of my notes are as 
 
 ![](https://github.com/DanialArab/images/blob/main/MLOPS/ML%20project%20steps.png?raw=true)
 
-In this course we will focus on the second (train) and third step (deploy). 
+In this course we will focus on the second (train) and third step (operate). 
 
 
 <a name="5"></a>
