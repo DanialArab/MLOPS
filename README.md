@@ -35,11 +35,12 @@ In this course we will focus on the second (train) and third step (operate).
 
 I set up my environemnt in my VM Ubuntu. I need to install:
 + Anaconda, for that:
-        wget https://repo.anaconda.com/archive/Anaconda3-2023.03-1-Linux-x86_64.sh
-        bash Anaconda3-2023.03-1-Linux-x86_64.sh
+
+            wget https://repo.anaconda.com/archive/Anaconda3-2023.03-1-Linux-x86_64.sh
+            bash Anaconda3-2023.03-1-Linux-x86_64.sh
         
 + Docker
-        I already installed docker engine on my machine when I took Mosh's docker course
+            I already installed docker engine on my machine when I took Mosh's docker course
         
 + Docker compose 
         
