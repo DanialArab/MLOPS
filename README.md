@@ -61,7 +61,9 @@ Docker Compose is a tool for running multi-container applications on Docker defi
             git clone https://github.com/DataTalksClub/mlops-zoomcamp.git
             cd mlops-zoomcamp/
             
++ I also need to install pyarrow to be able to read parquet data (NY Taxi data was switched from csv to parquet):
 
+            pip install pyarrow
 
 <a name="6"></a>
 ## 3. Experiment tracking and model management
