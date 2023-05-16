@@ -14,7 +14,7 @@ This repo documents my understanding of MLOPS. The structure of my notes are as 
 
 
 8. [Prerequisites (deployment and Docker)](#11)
-9. [Prerequisites (deployment and Docker)](#12)
+9. [References)](#12)
 
 
 <a name="1"></a>
