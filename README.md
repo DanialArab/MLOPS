@@ -44,7 +44,19 @@ I set up my environemnt in my VM Ubuntu. I need to install:
             I already installed docker engine on my machine when I took Mosh's docker course
         
 + Docker compose 
-        
+
+Docker Compose is a tool for running multi-container applications on Docker defined using the Compose file format. A Compose file is used to define how one or more containers that make up your application are configured. Once you have a Compose file, you can create and start your application with a single command: docker compose up.
+
+            mkdir soft
+            cd soft
+            wget https://github.com/docker/compose/releases/download/v2.18.0/docker-compose-linux-x86_64
+            mv docker-compose-linux-x86_64 docker-compose
+            chmod +x docker-compose (to make it executable)
+            nano .bashrc
+                export PATH="${HOME}/soft:${PATH}"
+            source .bashrc
+
+
 
 
 <a name="6"></a>
