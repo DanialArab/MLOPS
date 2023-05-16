@@ -9,12 +9,12 @@ This repo documents my understanding of MLOps. The structure of my notes are as 
     2. [MLOps maturity model](#3)
     3. [Why do we need MLOps](#4)
 
+2. [Environment preparation](#5)
+2. [Experiment tracking and model management](#6)
 
-2. [Experiment tracking and model management](#5)
 
-
-8. [Prerequisites (deployment and Docker)](#11)
-9. [References](#12)
+8. [Prerequisites (deployment and Docker)](#12)
+9. [References](#13)
 
 
 <a name="1"></a>
