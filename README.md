@@ -8,8 +8,8 @@ This repo documents my understanding of MLOps. The structure of my notes are as 
     1. [What is MLOps](#2)
     2. [Environment preparation](#3)
     3. [Issues with jupyter notebooks and why we need experiment tracker, model registry, ML pipeline and some best practices](#4)
-    4. [MLOps maturity model](#4)
-    5. [Why do we need MLOps](#5)
+    4. [MLOps maturity model](#5)
+    5. [Why do we need MLOps](#6)
 
 2. [Experiment tracking and model management](#6)
 
@@ -78,6 +78,9 @@ Notebooks are usually intended for experimentation and beyond this experimentati
 + we need to decompose our notebook and trun it into something that can be easily re-executed, which is called **ML pipeline**, like if we want to re-train the model what are the cells that we need to re-execute! We can parameterize our ML pipeline like in the future we just need to tune these parameters to easily re-execute the training through running a python script containing the ML pipeline. We use tools and best practices to achieve this, like using **Prefect** and **Kubeflow.** 
 
 So it is recommended to put the codes in a python script to turn the notebook into a more modular format. 
+
+<a name="5"></a>
+### MLOps maturity model
 
 <a name="6"></a>
 ## 3. Experiment tracking and model management
