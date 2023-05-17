@@ -9,7 +9,6 @@ This repo documents my understanding of MLOps. The structure of my notes are as 
     2. [Environment preparation](#3)
     3. [Issues with jupyter notebooks and why we need MLOps (experiment tracker, model registry, ML pipeline and some best practices)](#4)
     4. [MLOps maturity model](#5)
-    5. [Why do we need MLOps](#6)
 
 2. [Experiment tracking and model management](#6)
 
