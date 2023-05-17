@@ -7,7 +7,7 @@ This repo documents my understanding of MLOps. The structure of my notes are as 
 1. [Introduction](#1)
     1. [What is MLOps](#2)
     2. [Environment preparation](#3)
-    3. [Issues with jupyter notebooks and why we need experiment tracker, model registry, ML pipeline and some best practices](#4)
+    3. [Issues with jupyter notebooks and why we need MLOps (experiment tracker, model registry, ML pipeline and some best practices)](#4)
     4. [MLOps maturity model](#5)
     5. [Why do we need MLOps](#6)
 
@@ -67,7 +67,7 @@ Docker Compose is a tool for running multi-container applications on Docker defi
             pip install pyarrow
 
 <a name="4"></a>
-### Issues with jupyter notebooks and why we need experiment tracker, model registry, ML pipeline and some best practices
+### Issues with jupyter notebooks and why we need MLOps (experiment tracker, model registry, ML pipeline and some best practices)
 
 Notebooks are usually intended for experimentation and beyond this experimentation they have the following drawbacks:
 
@@ -81,6 +81,19 @@ So it is recommended to put the codes in a python script to turn the notebook in
 
 <a name="5"></a>
 ### MLOps maturity model
+
+good reference from microsoft: https://learn.microsoft.com/en-us/azure/architecture/example-scenario/mlops/mlops-maturity-model
+
+The purpose of the maturity model is to help clarify the Machine Learning Operations (MLOps) principles and practices. The maturity model shows the continuous improvement in the creation and operation of a production level machine learning application environment. You can use it as a metric for establishing the progressive requirements needed to measure the maturity of a machine learning production environment and its associated processes.
+
+The MLOps maturity model encompasses five levels of technical capability:
+
++ No MLOps
++ DevOps but no MLOps
++ Automated Training
++ Automated Model Deployment
++ Full MLOps Automated Operations
+
 
 <a name="6"></a>
 ## 3. Experiment tracking and model management
