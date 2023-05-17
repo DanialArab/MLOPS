@@ -7,8 +7,9 @@ This repo documents my understanding of MLOps. The structure of my notes are as 
 1. [Introduction](#1)
     1. [What is MLOps](#2)
     2. [Environment preparation](#3)
-    3. [MLOps maturity model](#4)
-    4. [Why do we need MLOps](#5)
+    3. [Issues with jupyter notebooks and why we need experiment tracker, model registry, ML pipeline and some best practices](#4)
+    4. [MLOps maturity model](#4)
+    5. [Why do we need MLOps](#5)
 
 2. [Experiment tracking and model management](#6)
 
@@ -65,18 +66,19 @@ Docker Compose is a tool for running multi-container applications on Docker defi
 
             pip install pyarrow
 
-<a name="6"></a>
-## 4. Issues with jupyter notebooks and why we need 
+<a name="4"></a>
+### Issues with jupyter notebooks and why we need experiment tracker, model registry, ML pipeline and some best practices
 
 Notebooks are usually intended for experimentation and beyond this experimentation they have the following drawbacks:
 
-+ Hard to remember the order by which the cells need to be executed
-+ Hard to remember which cells we really need 
-+ If we train different models with different parameters when experimenting, when later we come back to the notebook we lost all the history and the model's performance with various parameters unless I take a record of the details like in a spreedsheet documenting some metrics of the model performance along with the parameters tried, which is good but not ideal. The ideal is to log all the metrics to a special place called experiment tracker, where we can always go back and see all the preserved history. For experiment tracking we use a tool called MLflow.
-+ In a notebook we may save a model through pickle, when coming back we may not exactly know which model was saved, so that is why we save the model in a place called model registry where keeps all the models along with the metrics in the experiment tarcker, which is great for future reference with no ambiguity.
-+ we need to decompose our notebook and trun it into something that can be easily reexecuted, which is called ML pipeline, like if we want to retrain the model what are the cells that we need to reexecute! We can parameterize our ML pipeline like in the future we just need to tune these parameters to easily reexecute the training through running a python script containing the ML pipeline. We use tools and best practices to achieve this, like using Prefect and Kubeflow. 
++ hard to remember the order by which the cells need to be executed
++ hard to remember which cells we really need 
++ if we train different models with different parameters when experimenting, when later we come back to the notebook we lost all the history and the model's performances vs. various parameters unless we took a record of the details like in a spreedsheet documenting some metrics of the model performance along with the parameters tried, which is good but not ideal. The ideal is to log all the metrics to a special place called **experiment tracker**, where we can always go back and see all the preserved history. For experiment tracking we use a tool called **MLflow.**
++ in a notebook we may save a model through pickle, when coming back we may not exactly know which model was saved, so that is why we save the model in a place called **model registry** where we keep all the models along with the metrics in the experiment tarcker, which is great for future reference with no ambiguity.
++ we need to decompose our notebook and trun it into something that can be easily re-executed, which is called **ML pipeline**, like if we want to re-train the model what are the cells that we need to re-execute! We can parameterize our ML pipeline like in the future we just need to tune these parameters to easily re-execute the training through running a python script containing the ML pipeline. We use tools and best practices to achieve this, like using **Prefect** and **Kubeflow.** 
 
 So it is recommended to put the codes in a python script in a  more modular format. 
+
 <a name="6"></a>
 ## 3. Experiment tracking and model management
 
