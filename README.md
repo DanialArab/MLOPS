@@ -77,7 +77,7 @@ Notebooks are usually intended for experimentation and beyond this experimentati
 + in a notebook we may save a model through pickle, when coming back we may not exactly know which model was saved, so that is why we save the model in a place called **model registry** where we keep all the models along with the metrics in the experiment tarcker, which is great for future reference with no ambiguity.
 + we need to decompose our notebook and trun it into something that can be easily re-executed, which is called **ML pipeline**, like if we want to re-train the model what are the cells that we need to re-execute! We can parameterize our ML pipeline like in the future we just need to tune these parameters to easily re-execute the training through running a python script containing the ML pipeline. We use tools and best practices to achieve this, like using **Prefect** and **Kubeflow.** 
 
-So it is recommended to put the codes in a python script in a  more modular format. 
+So it is recommended to put the codes in a python script to turn the notebook into a more modular format. 
 
 <a name="6"></a>
 ## 3. Experiment tracking and model management
