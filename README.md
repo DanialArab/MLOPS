@@ -95,7 +95,7 @@ The MLOps maturity model encompasses five levels of technical capability:
 
 
 <a name="6"></a>
-## 3. Experiment tracking and model management
+## 2. Experiment tracking and model management
 
 <a name="8"></a>
 ## 8. Prerequisites (deployment and Docker)
