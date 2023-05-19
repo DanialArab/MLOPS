@@ -139,7 +139,7 @@ On the contrary with Kubeflow, which requires certain infra on top of the librar
 
 ### Tracking experiments with MLflow
 
-The MLflow Tracking module allows you to organize your experiments into runs, and to keep track of:
+The MLflow Tracking module allows you to organize your experiments into runs, and **manually** to keep track of:
 
 + Parameters
 + Metrics
@@ -163,7 +163,7 @@ Along with the above information that you can keep track of, MLflow **automatica
 + Start and end time
 + Author
 
-
+## UP TO THE SECOND SESSION OF MODULE 2
 
 
 
