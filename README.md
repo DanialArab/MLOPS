@@ -109,7 +109,9 @@ The MLOps maturity model encompasses five levels of technical capability:
 ## 2. Experiment tracking and model management
 
 <a name="7"></a>
-### Introduction
+### Introduction to experiment tracking and MLflow
+
+<a name="8"></a>
 #### Some terminologies
 
 + ML experiment: the process of building an ML Model
@@ -118,7 +120,7 @@ The MLOps maturity model encompasses five levels of technical capability:
 + Experiment metadata: all the info related to the ML experiment like the source
 code used, the name of the user, etc.
 
-<a name="8"></a>
+<a name="9"></a>
 #### What’s experiment tracking?
 
 Experiment tracking is the process of keeping track of all the relevant information from an ML experiment, which includes:
@@ -133,7 +135,7 @@ Experiment tracking is the process of keeping track of all the relevant informat
 
 The above info entities which we keep track of as an experiment tracking depends on the problem in hand like if an ML engineer or Data Scientist tries to play with hyperparameters he/she want to keep track of those hyperparameters along with the the values tried, or like if he/she tried different processes on the data before feeding into the model these processes' details should be kept track of. So all in all the main point here is that the info entities we keep track of as an experiment tracking is not unique and it all depends on the problem in hand, but the above list is somehow general/standard guidlines. 
 
-<a name="9"></a>
+<a name="10"></a>
 #### Why is experiment tracking so important?
 
 In general, because of these 3 main reasons:
@@ -142,7 +144,7 @@ In general, because of these 3 main reasons:
 + Organization
 + Optimization
 
-<a name="10"></a>
+<a name="11"></a>
 #### MLflow
 
 MLflow is a tool we use to perform experiment tracking. **MLflow is an open source platform for the machine learning lifecycle.** The ML lifecycle refers to the whole process of building and maintaining of an ML project. 
@@ -154,7 +156,7 @@ On the contrary with Kubeflow, which requires certain infra on top of the librar
 + Model Registry
 + Projects (out of scope for this course, take a look on your own)
 
-<a name="11"></a>
+<a name="12"></a>
 #### Tracking experiments with MLflow
 
 The MLflow Tracking module allows you to organize your experiments into runs, and **manually** to keep track of:
