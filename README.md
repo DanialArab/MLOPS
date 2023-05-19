@@ -98,10 +98,49 @@ The MLOps maturity model encompasses five levels of technical capability:
 ## 2. Experiment tracking and model management
 
 ### Some terminologies:
-+ ML experiment: the process of building and ML Model
++ ML experiment: the process of building an ML Model
 + Experiment run: each trial in an ML experiment 
 + Run artifact: any file that is associated with an ML run
-+ Experiment metadata
++ Experiment metadata: all the info related to the ML experiment like the source
+code used, the name of the user, etc.
+
+### What’s experiment tracking?
+
+Experiment tracking is the process of keeping track of all the relevant information from an ML experiment, which includes:
+
++ Source code
++ Environment
++ Data
++ Model
++ Hyperparameters
++ Metrics
++ ...
+
+The above info entities which we keep track of as an experiment tracking depends on the problem in hand like if an ML engineer or Data Scientist tries to play with hyperparameters he/she want to keep track of those hyperparameters along with the the values tried, or like if he/she tried different processes on the data before feeding into the model these processes' details should be kept track of. So all in all the main point here is that the info entities we keep track of as an experiment tracking is not unique and it all depends on the problem in hand, but the above list is somehow general/standard guidlines. 
+
+### Why is experiment tracking so important?
+
+In general, because of these 3 main reasons:
+
++ Reproducibility: as a scientist we want to reproduce the results
++ Organization
++ Optimization
+
+### MLflow
+
+MLflow is a tool we use to perform experiment tracking. **MLflow is an open source platform for the machine learning lifecycle.** The ML lifecycle refers to the whole process of building and maintaining of an ML project. 
+
+On the contrary with Kubeflow, which requires certain infra on top of the library to work, MLflow is just a Python package that can be installed with pip, and it contains four main modules:
+
++ Tracking
++ Models
++ Model Registry
++ Projects
+
+
+
+
+
 
 
 <a name="8"></a>
