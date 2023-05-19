@@ -135,7 +135,37 @@ On the contrary with Kubeflow, which requires certain infra on top of the librar
 + Tracking
 + Models
 + Model Registry
-+ Projects
++ Projects (out of scope for this course, take a look on your own)
+
+### Tracking experiments with MLflow
+
+The MLflow Tracking module allows you to organize your experiments into runs, and to keep track of:
+
++ Parameters
++ Metrics
++ Metadata
++ Artifacts
++ Models
+
+some explanations:
+
+-- for example the path to the training dataset could be one parameter, since in the future if you want to change the dataset you can just easily change that parameter. Or if you apply various preprocessing to the data you can add those preprocessing as a parameter. 
+
+-- You may have tags like the name of developer etc. which could be kept track of as metadata.
+
+-- If you train an ML model and then performed some visualizations of the data, this can be considered as artifact. Also you can look at the dataset as an artifact but of course this does not scale very well because your data will be duplicated and you can come up with a better solution for that. 
+
+
+Along with the above information that you can keep track of, MLflow **automatically** logs extra information about the run:
+
++ Source code
++ Version of the code (git commit)
++ Start and end time
++ Author
+
+
+
+
 
 
 
