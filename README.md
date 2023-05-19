@@ -97,6 +97,13 @@ The MLOps maturity model encompasses five levels of technical capability:
 <a name="6"></a>
 ## 2. Experiment tracking and model management
 
+### Some terminologies:
++ ML experiment: the process of building and ML Model
++ Experiment run: each trial in an ML experiment 
++ Run artifact: any file that is associated with an ML run
++ Experiment metadata
+
+
 <a name="8"></a>
 ## 8. Prerequisites (deployment and Docker)
 
