@@ -52,7 +52,11 @@ I set up my environemnt in my VM Ubuntu. I need to install:
         
 + Docker
 
-            I already installed docker engine on my machine when I took Mosh's docker course
+            sudo apt install docker.io
+            
++ run docker without sudo
+
+            sudo usermod -aG docker $USER (https://docs.docker.com/engine/install/linux-postinstall/)
         
 + Docker compose 
 
