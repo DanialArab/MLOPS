@@ -186,7 +186,9 @@ Along with the above information that you can keep track of, MLflow **automatica
 <a name="13"></a>
 ### second session
 
-
+        conda create -n exp-tracking-env python=3.10.9
+        conda activate exp-tracking-env
+        pip install -r requirements.txt
 
 
 
