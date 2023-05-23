@@ -133,7 +133,7 @@ Experiment tracking is the process of keeping track of all the relevant informat
 + Metrics
 + ...
 
-The above info entities which we keep track of as an experiment tracking depends on the problem in hand like if an ML engineer or Data Scientist tries to play with hyperparameters he/she want to keep track of those hyperparameters along with the the values tried, or like if he/she tried different processes on the data before feeding into the model these processes' details should be kept track of. So all in all the main point here is that the info entities we keep track of as an experiment tracking is not unique and it all depends on the problem in hand, but the above list is somehow general/standard guidlines. 
+The above info entities which we keep track of as an experiment tracking depends on the problem in hand like if an ML engineer or Data Scientist tries to play with hyperparameters he/she wants to keep track of those hyperparameters along with the the values tried, or like if he/she tried different processes on the data before feeding into the model these processes' details should be kept track of. So all in all the main point here is that the info entities we keep track of as an experiment tracking is not unique and it all depends on the problem in hand, but the above list is somehow general/standard guidlines. 
 
 <a name="10"></a>
 #### Why is experiment tracking so important?
@@ -183,7 +183,9 @@ Along with the above information that you can keep track of, MLflow **automatica
 + Start and end time
 + Author
 
-## UP TO THE SECOND SESSION OF MODULE 2
+<a name="13"></a>
+### second session
+
 
 
 
