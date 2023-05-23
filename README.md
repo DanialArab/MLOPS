@@ -184,13 +184,34 @@ Along with the above information that you can keep track of, MLflow **automatica
 + Author
 
 <a name="13"></a>
-### second session
+### Getting started with MLflow
+
+Let's first create a separate conda environemnt and install all the packages and libraries: 
 
         conda create -n exp-tracking-env python=3.10.9
         conda activate exp-tracking-env
         pip install -r requirements.txt
+        pip list
 
+requirements.txt includes
 
+        mlflow
+        jupyter
+        scikit-learn
+        pandas
+        seaborn
+        hyperopt
+        xgboost
+        fastparquet
+        boto3
+        
+Some quick note:
+
++ hyperopt:
+Hyperopt is a Python library for hyperparameter optimization, which is the process of finding the best set of hyperparameters for a machine learning model. It provides a flexible and efficient framework for defining and searching over a hyperparameter search space.
+
++ fastparquet:
+Fastparquet is a Python library for reading and writing Parquet files efficiently. Parquet is a columnar storage file format that is highly optimized for analytical processing, particularly for big data workloads. Fastparquet is designed to provide fast and memory-efficient I/O operations for working with Parquet files.
 
 
 
