@@ -52,7 +52,11 @@ I set up my environemnt in my VM Ubuntu. I need to install:
         
 + Docker
 
-            I already installed docker engine on my machine when I took Mosh's docker course
+            sudo apt install docker.io
+            
++ run docker without sudo
+
+            sudo usermod -aG docker $USER (https://docs.docker.com/engine/install/linux-postinstall/)
         
 + Docker compose 
 
@@ -189,6 +193,7 @@ Along with the above information that you can keep track of, MLflow **automatica
 Let's first create a separate conda environemnt and install all the packages and libraries: 
 
         conda create -n exp-tracking-env python=3.10.9
+        [conda info --envs](http://127.0.0.1:5000 ) http://127.0.0.1:5000 
         conda activate exp-tracking-env
         pip install -r requirements.txt
         pip list
@@ -213,10 +218,36 @@ Hyperopt is a Python library for hyperparameter optimization, which is the proce
 + fastparquet:
 Fastparquet is a Python library for reading and writing Parquet files efficiently. Parquet is a columnar storage file format that is highly optimized for analytical processing, particularly for big data workloads. Fastparquet is designed to provide fast and memory-efficient I/O operations for working with Parquet files.
 
+to get access to the mlflow ui:
 
+        mlflow ui --backend-store-uri sqlite:///mlflow.db
 
+then in my code, I add:
 
+        import mlflow 
 
+        mlflow.set_tracking_uri("sqlite:///mlflow.db")
+        mlflow.set_experiment('nyc-taxi-experiment')
+
+also:
+
+        with mlflow.start_run():
+
+            mlflow.set_tag("developer", 'danial')
+
+            mlflow.log_param('train-data-path', parent_directory + 'green_tripdata_2021-01.parquet')
+            mlflow.log_param('valid-data-path', parent_directory + 'green_tripdata_2021-02.parquet')
+
+            alpha = 0.1
+            mlflow.log_param('alpha', alpha)
+
+            lr = Lasso(alpha)
+            lr.fit(X_train, y_train)
+
+            y_pred = lr.predict(X_val)
+
+            rmse = mean_squared_error(y_val, y_pred, squared=False)
+            mlflow.log_metric('rmse', rmse)
 
 <a name="8"></a>
 ## 8. Prerequisites (deployment and Docker)
