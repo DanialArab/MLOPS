@@ -262,4 +262,4 @@ https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp/05
 https://github.com/DataTalksClub/mlops-zoomcamp
 
 
-my progress: up to homework of the first module
+my progress: up to 2.3 Experiment tracking with MLflow
