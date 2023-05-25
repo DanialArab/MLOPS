@@ -214,10 +214,12 @@ requirements.txt includes
         
 Some quick note:
 
-+ hyperopt:
++ **hyperopt:**
+
 Hyperopt is a Python library for hyperparameter optimization, which is the process of finding the best set of hyperparameters for a machine learning model. It provides a flexible and efficient framework for defining and searching over a hyperparameter search space.
 
-+ fastparquet:
++ **fastparquet:**
+
 Fastparquet is a Python library for reading and writing Parquet files efficiently. Parquet is a columnar storage file format that is highly optimized for analytical processing, particularly for big data workloads. Fastparquet is designed to provide fast and memory-efficient I/O operations for working with Parquet files.
 
 to get access to the mlflow ui:
@@ -252,7 +254,88 @@ also:
             mlflow.log_metric('rmse', rmse)
 
 <a name="14"></a>
+
 #### How to tune hyperparameters using hyperopt and explore the results using mlflow 
+
+here is the code:
+
+        import xgboost as xgb
+        from hyperopt import fmin, tpe, hp, STATUS_OK, Trials
+        from hyperopt.pyll import scope
+
+        train = xgb.DMatrix(X_train, label=y_train)
+        valid = xgb.DMatrix(X_val, label=y_val)
+
+        def objective(params):
+            with mlflow.start_run():
+                mlflow.set_tag("model", "xgboost")
+                mlflow.log_params(params)
+                booster = xgb.train(
+                    params=params,
+                    dtrain=train,
+                    num_boost_round=1000,
+                    evals=[(valid, 'validation')],
+                    early_stopping_rounds=50
+                )
+                y_pred = booster.predict(valid)
+                rmse = mean_squared_error(y_val, y_pred, squared=False)
+                mlflow.log_metric("rmse", rmse)
+
+            return {'loss': rmse, 'status': STATUS_OK}
+
+then I need to specify the search space, whcih is the ranges in which I want hyperopt to explore the hyperparameters:
+
+            search_space = {
+            'max_depth': scope.int(hp.quniform('max_depth', 4, 100, 1)),
+            'learning_rate': hp.loguniform('learning_rate', -3, 0),
+            'reg_alpha': hp.loguniform('reg_alpha', -5, -1),
+            'reg_lambda': hp.loguniform('reg_lambda', -6, -1),
+            'min_child_weight': hp.loguniform('min_child_weight', -1, 3),
+            'objective': 'reg:linear',
+            'seed': 42
+        }
+
+useful link: http://hyperopt.github.io/hyperopt/getting-started/search_spaces/
+
+        best_result = fmin(
+            fn=objective,
+            space=search_space,
+            algo=tpe.suggest,
+            max_evals=50,
+            trials=Trials()
+        )
+
+
+some notes:
+
++ xgb.fit() vs. xgb.train():
+
+In the XGBoost library, xgb.train() and xgb.fit() are both methods used for training XGBoost models, but they serve slightly different purposes.
+
+xgb.train() is a **flexible and low-level API** provided by XGBoost that allows you to have fine-grained control over the training process. It requires you to explicitly define the training parameters and specify the training data as a **DMatrix object**. With xgb.train(), you have full control over the training loop, including setting the number of boosting rounds, monitoring evaluation metrics, and handling early stopping criteria. It returns a trained booster model object that can be used for making predictions.
+
+On the other hand, **xgb.fit() is a higher-level** convenience method provided by XGBoost that simplifies the training process by automatically handling certain aspects, such as setting default parameters and early stopping. With xgb.fit(), you don't need to explicitly specify the number of boosting rounds or define a separate evaluation set. Instead, you provide the training data directly as NumPy arrays or Pandas DataFrame, and XGBoost internally takes care of these details. It returns a trained booster model object similar to xgb.train().
+
+So, the choice between xgb.train() and xgb.fit() depends on your specific requirements. If you need more control and flexibility over the training process, or if you want to define custom evaluation metrics or implement complex training logic, then xgb.train() is the preferred option. However, if you prefer a more straightforward and convenient training process with default settings, then xgb.fit() can be a simpler choice.
+
+
+##### autolog
+
+https://mlflow.org/docs/latest/tracking.html#automatic-logging
+
+Automatic logging allows you to log metrics, parameters, and models without the need for explicit log statements.
+
+The following libraries support autologging:
+
+        Scikit-learn
+        Keras
+        Gluon
+        XGBoost
+        LightGBM
+        Statsmodels
+        Spark
+        Fastai
+        Pytorch
 
 
 <a name="8"></a>
