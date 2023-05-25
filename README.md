@@ -305,6 +305,10 @@ useful link: http://hyperopt.github.io/hyperopt/getting-started/search_spaces/
             trials=Trials()
         )
 
+the mlflow ui provides very useful summary:
+
+![](https://github.com/DanialArab/MLOPS/blob/main/1.%20Experiment%20tracking/screenshot-exp-tracking.png)
+
 
 
 some notes:
