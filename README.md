@@ -317,7 +317,7 @@ There is no single rule for selecting the best model and it depends on what you 
             'learning_rate':	0.08176795825696564,
             'max_depth':	34,
             'min_child_weight':	1.7946623467511347,
-            'objective':	reg:linear,
+            'objective':	'reg:linear',
             'reg_alpha':	0.021105230437726465,
             'reg_lambda':	0.02961987918231709,
             'seed':	42
