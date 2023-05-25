@@ -368,7 +368,7 @@ On the other hand, **xgb.fit() is a higher-level** convenience method provided b
 So, the choice between xgb.train() and xgb.fit() depends on your specific requirements. If you need more control and flexibility over the training process, or if you want to define custom evaluation metrics or implement complex training logic, then xgb.train() is the preferred option. However, if you prefer a more straightforward and convenient training process with default settings, then xgb.fit() can be a simpler choice.
 
 
-##### autolog
++ autolog
 
 https://mlflow.org/docs/latest/tracking.html#automatic-logging
 
