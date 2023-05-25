@@ -19,6 +19,7 @@ This repo documents my understanding of MLOps. The structure of my notes are as 
         5. [Tracking experiments with MLflow](#12)
         6. [Getting started with MLflow](#13)
         7. [How to tune hyperparameters using hyperopt and explore the results using mlflow](#14)
+        8. [How to select the best model](#15)
         
 8. [Prerequisites (deployment and Docker)](#12)
 9. [References](#13)
@@ -254,7 +255,6 @@ also:
             mlflow.log_metric('rmse', rmse)
 
 <a name="14"></a>
-
 #### How to tune hyperparameters using hyperopt and explore the results using mlflow 
 
 here is the code:
@@ -309,11 +309,53 @@ the mlflow ui provides very useful summary:
 
 ![](https://github.com/DanialArab/MLOPS/blob/main/1.%20Experiment%20tracking/screenshot-exp-tracking.png)
 
+<a name="15"></a>
+#### How to select the best model 
+There is no single rule for selecting the best model and it depends on what you are really looking for. One approach could be to go to the mlflow ui and after filtering the results based on the tag like to see all the results for the xgboost, and then sort the results based on the metric and simply see what is the model delivers the best metric. Of course, model complexities affecting the model size and training time are all the other considerations. For now, I go with the model leading to the best metric, I get the parameters of this moel from the mlflow ui and put it in a dictionary:
 
+        best_params = {
+            'learning_rate':	0.08176795825696564,
+            'max_depth':	34,
+            'min_child_weight':	1.7946623467511347,
+            'objective':	reg:linear,
+            'reg_alpha':	0.021105230437726465,
+            'reg_lambda':	0.02961987918231709,
+            'seed':	42
+            }
+
+Then I want to train a model one more time but with these best parameters and save the model: one approach could be to perform this like before using 
+
+        with mlflow.start_run():
+        .... 
+        
+but as will be discussed later, we can perform autologging with certain libraries, which xgboost is one of them. Autolog lets you log with much less lines of code:
+
+        best_params = {
+        'learning_rate':	0.08176795825696564,
+        'max_depth':	34,
+        'min_child_weight':	1.7946623467511347,
+        'objective':	'reg:linear',
+        'reg_alpha':	0.021105230437726465,
+        'reg_lambda':	0.02961987918231709,
+        'seed':	42
+        }
+
+        mlflow.xgboost.autolog()
+
+
+        booster = xgb.train(
+                params=best_params,
+                dtrain=train,
+                num_boost_round=1000,
+                evals=[(valid, 'validation')],
+                early_stopping_rounds=50
+                )
+
+now if I go to mlflow ui there is much more parameters logged automatically along with Artifacts.
 
 some notes:
 
-+ in  mlflow ui I can filter the results based on the tags like **tags.model='xgboost'**. SO that is why it is so important to have tags, as I have above through **mlflow.set_tag("model", "xgboost")**. 
++ in  mlflow ui I can filter the results based on the tags like **tags.model='xgboost'**. So that is why it is so important to have tags, as I have above through **mlflow.set_tag("model", "xgboost")**. 
 
 + xgb.fit() vs. xgb.train():
 
@@ -358,4 +400,4 @@ https://github.com/alexeygrigorev/mlbookcamp-code/tree/master/course-zoomcamp/05
 https://github.com/DataTalksClub/mlops-zoomcamp
 
 
-my progress: up to 2.3 Experiment tracking with MLflow
+my progress: up to 2.4 - MOdel management
