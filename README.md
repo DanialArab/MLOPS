@@ -17,6 +17,8 @@ This repo documents my understanding of MLOps. The structure of my notes are as 
         3. [Why is experiment tracking so important?](#10)
         4. [MLflow](#11)
         5. [Tracking experiments with MLflow](#12)
+        6. [Getting started with MLflow](#13)
+        7. [How to tune hyperparameters using hyperopt and explore the results using mlflow](#14)
         
 8. [Prerequisites (deployment and Docker)](#12)
 9. [References](#13)
@@ -193,7 +195,7 @@ Along with the above information that you can keep track of, MLflow **automatica
 Let's first create a separate conda environemnt and install all the packages and libraries: 
 
         conda create -n exp-tracking-env python=3.10.9
-        [conda info --envs](http://127.0.0.1:5000 ) http://127.0.0.1:5000 
+        conda info --envs 
         conda activate exp-tracking-env
         pip install -r requirements.txt
         pip list
@@ -248,6 +250,10 @@ also:
 
             rmse = mean_squared_error(y_val, y_pred, squared=False)
             mlflow.log_metric('rmse', rmse)
+
+<a name="14"></a>
+### How to tune hyperparameters using hyperopt and explore the results using mlflow 
+
 
 <a name="8"></a>
 ## 8. Prerequisites (deployment and Docker)
