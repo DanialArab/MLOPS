@@ -306,7 +306,10 @@ useful link: http://hyperopt.github.io/hyperopt/getting-started/search_spaces/
         )
 
 
+
 some notes:
+
++ in  mlflow ui I can filter the results based on the tags like **tags.model='xgboost'**. SO that is why it is so important to have tags, as I have above through **mlflow.set_tag("model", "xgboost")**. 
 
 + xgb.fit() vs. xgb.train():
 
