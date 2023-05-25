@@ -190,7 +190,7 @@ Along with the above information that you can keep track of, MLflow **automatica
 + Author
 
 <a name="13"></a>
-### Getting started with MLflow
+#### Getting started with MLflow
 
 Let's first create a separate conda environemnt and install all the packages and libraries: 
 
@@ -252,7 +252,7 @@ also:
             mlflow.log_metric('rmse', rmse)
 
 <a name="14"></a>
-### How to tune hyperparameters using hyperopt and explore the results using mlflow 
+#### How to tune hyperparameters using hyperopt and explore the results using mlflow 
 
 
 <a name="8"></a>
