@@ -391,6 +391,26 @@ The following libraries support autologging:
 <a name="16"></a>
 ### Model management
 
+When we finish the experiment tracking stage it means that we are happy with the model and so we may want to save it somewhere and have some kind of versioning. Then we may want to deploy the model and maybe we realize that the model needs to be updated in order to scale. Finally the prediction monitoring stage starts. Here we focus on model management and deployment using MLflow. Similar to experiment tracking if we want to perform model management manually like using a folder system as a very basic way of model management, we will encounter the following issues:
+
++ error prone
++ no clear versioning, specifically when number of models grows
++ no model lineage 
+
+**Model lineage** refers to the historical evolution and genealogy of a machine learning model. It traces the origin and development of the model from its initial training data and architecture to its subsequent iterations, improvements, and modifications.
+
+The lineage of a model typically includes information such as the dataset used for training, the preprocessing and feature engineering steps applied, the specific algorithms or neural network architectures employed, and any fine-tuning or transfer learning processes that occurred. It also incorporates details about the hyperparameters chosen during training, the optimization techniques utilized, and the evaluation metrics employed to measure the model's performance.
+
+By documenting and maintaining model lineage, researchers and practitioners can gain insights into the model's progress, understand the decisions made throughout its development, and track the impact of various changes on its performance. This information is valuable for reproducibility, collaboration, troubleshooting, and understanding the limitations and strengths of the model.
+
+Model lineage is particularly important in regulated industries where transparency and accountability are crucial, such as healthcare, finance, and legal domains. It helps in ensuring compliance with regulations, providing explanations for model predictions, and detecting and addressing any biases or ethical concerns that may arise from the model's design or training data.
+
+We have two options to save the model:
+
++ saving the model as an artifact (which is the basic approach and not really useful)
++ (preferred approach)
+
+
 
 
 <a name="8"></a>
