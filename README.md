@@ -520,7 +520,7 @@ I can later deploy this model as a Python function or in a Docker container or i
 
 <a name="17"></a>
 ### Model registry
-
+here
 
 
 <a name="8"></a>
