@@ -21,6 +21,7 @@ This repo documents my understanding of MLOps. The structure of my notes are as 
         7. [How to tune hyperparameters using hyperopt and explore the results using mlflow](#14)
         8. [How to select the best model](#15)
     2. [Model management](#16)
+    3. [Model registry](#17) 
     
     
 8. [Prerequisites (deployment and Docker)](#12)
@@ -405,11 +406,120 @@ By documenting and maintaining model lineage, researchers and practitioners can 
 
 Model lineage is particularly important in regulated industries where transparency and accountability are crucial, such as healthcare, finance, and legal domains. It helps in ensuring compliance with regulations, providing explanations for model predictions, and detecting and addressing any biases or ethical concerns that may arise from the model's design or training data.
 
-We have two options to save the model:
+We have two options to save/log the models in MLflow:
 
-+ saving the model as an artifact (which is the basic approach and not really useful)
-+ (preferred approach)
++ saving the model as an artifact using the method **mlflow.log_artifact()** (which is the basic approach and not really usefull)
 
+        with mlflow.start_run():
+
+            mlflow.set_tag("developer", 'danial')
+
+            mlflow.log_param('train-data-path', parent_directory + 'green_tripdata_2021-01.parquet')
+            mlflow.log_param('valid-data-path', parent_directory + 'green_tripdata_2021-02.parquet')
+
+            alpha = 1
+            mlflow.log_param('alpha', alpha)
+
+            lr = Lasso(alpha)
+            lr.fit(X_train, y_train)
+
+            y_pred = lr.predict(X_val)
+
+            rmse = mean_squared_error(y_val, y_pred, squared=False)
+            mlflow.log_metric('rmse', rmse)
+
+            mlflow.log_artifact(local_path='models/lin_reg.bin', artifact_path="models_pickle")
+
+
++ saving the model using **mlflow.xgboost.log_model()** (in general: **mlflow.framework.log_model()**) method (preferred approach)
+
+        with mlflow.start_run():
+
+
+            best_params = {
+            'learning_rate':	0.08176795825696564,
+            'max_depth':	34,
+            'min_child_weight':	1.7946623467511347,
+            'objective':	'reg:linear',
+            'reg_alpha':	0.021105230437726465,
+            'reg_lambda':	0.02961987918231709,
+            'seed':	42
+            }
+
+            mlflow.log_params(best_params)
+
+            booster = xgb.train(
+                    params=best_params,
+                    dtrain=train,
+                    num_boost_round=1000,
+                    evals=[(valid, 'validation')],
+                    early_stopping_rounds=50
+                )
+
+            y_pred = booster.predict(valid)
+            rmse = mean_squared_error(y_val, y_pred, squared=False)
+            mlflow.log_metric("rmse", rmse)
+
+
+            mlflow.xgboost.log_model(booster, artifact_path="models_mlflow") 
+    
+also it is a good idea to save the preprocessing steps as an artifact, whcih is required later to use the model:
+
+        with mlflow.start_run():
+
+
+            best_params = {
+            'learning_rate':	0.08176795825696564,
+            'max_depth':	34,
+            'min_child_weight':	1.7946623467511347,
+            'objective':	'reg:linear',
+            'reg_alpha':	0.021105230437726465,
+            'reg_lambda':	0.02961987918231709,
+            'seed':	42
+            }
+
+            mlflow.log_params(best_params)
+
+            booster = xgb.train(
+                    params=best_params,
+                    dtrain=train,
+                    num_boost_round=1000,
+                    evals=[(valid, 'validation')],
+                    early_stopping_rounds=50
+                )
+
+            y_pred = booster.predict(valid)
+            rmse = mean_squared_error(y_val, y_pred, squared=False)
+            mlflow.log_metric("rmse", rmse)
+
+
+            with open('models/preprocessor.b', 'wb') as f_out:
+                pickle.dump (dv, f_out)
+
+
+            mlflow.log_artifact(local_path="models/preprocessor.b", artifact_path="preprocessor")
+
+            mlflow.xgboost.log_model(booster, artifact_path="models_mlflow") 
+
+mlflow automatically generates some code snippets for making predictions on Spark DataFrame or Pandas DataFrame, which is quite handy. I can access the model using Python function flavour:
+
+        logged_model = 'runs:/52efb3e01fc446c8b4c96db03e1b8cae/models_mlflow'
+
+        # Load model as a PyFuncModel.
+        loaded_model = mlflow.pyfunc.load_model(logged_model)
+
+I also could load the model using the framework (xgboost in this example) flavour:
+
+        xgboost_model = mlflow.xgboost.load_model(logged_model)
+
+which gives me back an xgboost object on which i can apply available methods:
+
+        y_pred = xgboost_model.predict(valid) 
+        
+I can later deploy this model as a Python function or in a Docker container or in JUpyter notebook or maybe as a batch job in Spark. Furtheremote, I can load the model on a Kubernetes cluster or deploy it to a different cloud environment like Amazon Sagemaker. Next we will talk about model registry, which is an important part of MLflow allowing us to have organized set of versions of models and decide which models are ready to production or which ones should be archived. 
+
+<a name="17"></a>
+### Model registry
 
 
 
