@@ -391,7 +391,7 @@ The following libraries support autologging:
 <a name="16"></a>
 ### Model management
 
-When we finish the experiment tracking stage it means that we are happy with the model and so we may want to save it somewhere and have some kind of versioning. Then we may want to deploy the model and maybe we realize that the model needs to be updated in order to scale. Finally the prediction monitoring stage starts. Here we focus on model management and deployment using MLflow. Similar to experiment tracking if we want to perform model management manually like using a folder system as a very basic way of model management, we will encounter the following issues:
+When we finish the experiment tracking stage it means that we are happy with the model and so we may want to save it somewhere and have some kind of versioning. Then we may want to deploy the model and maybe we realize that the model needs to be updated in order to scale. Finally the prediction monitoring stage starts. Here we focus on model management and deployment using MLflow. Similar to experiment tracking if we want to perform model management manually like using a folder system as a very basic way of model management, we will encounter the following issues with this process:
 
 + error prone
 + no clear versioning, specifically when number of models grows
