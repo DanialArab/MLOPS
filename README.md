@@ -20,7 +20,9 @@ This repo documents my understanding of MLOps. The structure of my notes are as 
         6. [Getting started with MLflow](#13)
         7. [How to tune hyperparameters using hyperopt and explore the results using mlflow](#14)
         8. [How to select the best model](#15)
-        
+    2. [Model management](#16)
+    
+    
 8. [Prerequisites (deployment and Docker)](#12)
 9. [References](#13)
 
@@ -385,6 +387,10 @@ The following libraries support autologging:
         Spark
         Fastai
         Pytorch
+
+<a name="7"></a>
+### Model management
+
 
 
 <a name="8"></a>
