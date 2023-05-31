@@ -1,0 +1,15 @@
+artifact_uri: file:///home/danial/Desktop/mymlops/MLOPS/homeworks/mlruns/0/784cbcedd4504e88b5c6846f248b9d9c/artifacts
+end_time: 1685559547499
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 784cbcedd4504e88b5c6846f248b9d9c
+run_name: fortunate-zebra-627
+run_uuid: 784cbcedd4504e88b5c6846f248b9d9c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685559547356
+status: 4
+tags: []
+user_id: danial

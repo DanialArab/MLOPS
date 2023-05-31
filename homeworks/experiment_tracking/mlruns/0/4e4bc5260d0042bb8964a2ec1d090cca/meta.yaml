@@ -1,0 +1,15 @@
+artifact_uri: file:///home/danial/Desktop/mymlops/MLOPS/homeworks/experiment_tracking/mlruns/0/4e4bc5260d0042bb8964a2ec1d090cca/artifacts
+end_time: 1685560434289
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4e4bc5260d0042bb8964a2ec1d090cca
+run_name: dashing-roo-920
+run_uuid: 4e4bc5260d0042bb8964a2ec1d090cca
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685560422366
+status: 4
+tags: []
+user_id: danial

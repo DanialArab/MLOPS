@@ -1,0 +1,15 @@
+artifact_uri: file:///home/danial/Desktop/mymlops/MLOPS/homeworks/mlruns/0/eb36b62e8b22468f9b90d8798ada595c/artifacts
+end_time: 1685559561097
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: eb36b62e8b22468f9b90d8798ada595c
+run_name: crawling-moose-530
+run_uuid: eb36b62e8b22468f9b90d8798ada595c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685559560884
+status: 4
+tags: []
+user_id: danial

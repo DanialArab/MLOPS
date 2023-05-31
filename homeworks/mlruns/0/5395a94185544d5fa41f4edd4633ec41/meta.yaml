@@ -1,0 +1,15 @@
+artifact_uri: file:///home/danial/Desktop/mymlops/MLOPS/homeworks/mlruns/0/5395a94185544d5fa41f4edd4633ec41/artifacts
+end_time: 1685559517377
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 5395a94185544d5fa41f4edd4633ec41
+run_name: selective-seal-164
+run_uuid: 5395a94185544d5fa41f4edd4633ec41
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685559517166
+status: 4
+tags: []
+user_id: danial

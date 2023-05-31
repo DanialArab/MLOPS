@@ -1,0 +1,15 @@
+artifact_uri: file:///home/danial/Desktop/mymlops/MLOPS/homeworks/experiment_tracking/mlruns/0/6d492d1ca0624a079720bda3f80dc61c/artifacts
+end_time: 1685560535886
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 6d492d1ca0624a079720bda3f80dc61c
+run_name: beautiful-gull-994
+run_uuid: 6d492d1ca0624a079720bda3f80dc61c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685560526323
+status: 4
+tags: []
+user_id: danial

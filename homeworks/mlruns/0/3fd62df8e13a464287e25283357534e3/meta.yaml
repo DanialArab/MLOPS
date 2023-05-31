@@ -1,0 +1,15 @@
+artifact_uri: file:///home/danial/Desktop/mymlops/MLOPS/homeworks/mlruns/0/3fd62df8e13a464287e25283357534e3/artifacts
+end_time: 1685556461059
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3fd62df8e13a464287e25283357534e3
+run_name: serious-flea-591
+run_uuid: 3fd62df8e13a464287e25283357534e3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685556460920
+status: 4
+tags: []
+user_id: danial

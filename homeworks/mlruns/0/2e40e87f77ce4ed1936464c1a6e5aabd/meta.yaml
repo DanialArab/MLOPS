@@ -1,0 +1,15 @@
+artifact_uri: file:///home/danial/Desktop/mymlops/MLOPS/homeworks/mlruns/0/2e40e87f77ce4ed1936464c1a6e5aabd/artifacts
+end_time: 1685559782235
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 2e40e87f77ce4ed1936464c1a6e5aabd
+run_name: defiant-colt-464
+run_uuid: 2e40e87f77ce4ed1936464c1a6e5aabd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685559782098
+status: 4
+tags: []
+user_id: danial

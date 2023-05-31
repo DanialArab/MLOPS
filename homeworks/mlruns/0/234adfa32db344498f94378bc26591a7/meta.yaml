@@ -1,0 +1,15 @@
+artifact_uri: file:///home/danial/Desktop/mymlops/MLOPS/homeworks/mlruns/0/234adfa32db344498f94378bc26591a7/artifacts
+end_time: 1685556118076
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 234adfa32db344498f94378bc26591a7
+run_name: amusing-mouse-767
+run_uuid: 234adfa32db344498f94378bc26591a7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685556117758
+status: 3
+tags: []
+user_id: danial

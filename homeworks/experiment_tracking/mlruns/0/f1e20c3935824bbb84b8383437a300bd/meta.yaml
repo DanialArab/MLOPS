@@ -1,0 +1,15 @@
+artifact_uri: file:///home/danial/Desktop/mymlops/MLOPS/homeworks/experiment_tracking/mlruns/0/f1e20c3935824bbb84b8383437a300bd/artifacts
+end_time: 1685559936432
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f1e20c3935824bbb84b8383437a300bd
+run_name: gentle-sow-641
+run_uuid: f1e20c3935824bbb84b8383437a300bd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1685559924643
+status: 4
+tags: []
+user_id: danial
