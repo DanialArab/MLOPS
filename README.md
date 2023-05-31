@@ -520,7 +520,23 @@ I can later deploy this model as a Python function or in a Docker container or i
 
 <a name="17"></a>
 ### Model registry
-here
+
+We store the production-ready models in model registry. Model registry does not deploy any  model it just lists the production-ready models. In order to deploy the model you need to complement the  model registry with soem CICD codes. We have different stages in model registry like **staging, production, and archived**, which can be assigned to different versions of the models in the model registry. 
+
+We can use **mlflowclient** class, which is a client of:
++ an MLflow tracking server that craetes and manages experiments and runs
++ and MLflow registry server that creates and manages registered models and model versions
+
+to instantiate this class we need to pass a tracking URI and/or a registry URI:
+
+        from mlflow.tracking import MlflowClient
+        client = MlflowClient(tracking_uri = "sqlite:///mlflow.db")
+
+The Model Registry component is a centralized model store, set of APIs, and a UI, to collaboratively manage the full lifecycle of an MLflow Model. It provides:
+        ● Model lineage,
+        ● Model versioning,
+        ● Stage transitions, and
+        ● Annotations
 
 
 <a name="8"></a>
