@@ -533,10 +533,10 @@ to instantiate this class we need to pass a tracking URI and/or a registry URI:
         client = MlflowClient(tracking_uri = "sqlite:///mlflow.db")
 
 The Model Registry component is a centralized model store, set of APIs, and a UI, to collaboratively manage the full lifecycle of an MLflow Model. It provides:
-        ● Model lineage,
-        ● Model versioning,
-        ● Stage transitions, and
-        ● Annotations
++ Model lineage,
++ Model versioning,
++ Stage transitions, and
++ Annotations
 
 
 <a name="8"></a>
