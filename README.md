@@ -24,7 +24,7 @@ This repo documents my understanding of MLOps. The structure of my notes are as 
     3. [Model registry](#17) 
     4. [MLflow: benefits, limitations and alternatives](#18)
  
- 3. [Orchestration and ML Pipelines] (#19)
+ 3. [Orchestration and ML Pipelines](#19)
     1. []()
     
 8. [Prerequisites (deployment and Docker)](#12)
