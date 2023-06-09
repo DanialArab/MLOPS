@@ -545,7 +545,8 @@ The Model Registry component is a centralized model store, set of APIs, and a UI
 
 
 <a name="19"></a>
-## 19. Orchestration and ML Pipelines]
+## 3. Orchestration and ML Pipelines
+
 
 
 
