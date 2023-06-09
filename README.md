@@ -27,6 +27,7 @@ This repo documents my understanding of MLOps. The structure of my notes are as 
  3. [Orchestration and ML Pipelines](#19)
     1. [Introdution to Workflow Orchestration](#20)
     2. [Introdution Prefect](#21)
+        1. [Prefect Terminology](#22)
     
 8. [Prerequisites (deployment and Docker)](#12)
 9. [References](#13)
@@ -553,12 +554,14 @@ The Model Registry component is a centralized model store, set of APIs, and a UI
 
 We use **Prefect** for Orchestration. Prefect allows us to orchestrate and observe our Python workflows at scale with a lot of flexibilities. 
 
-
-
 <a name="21"></a>
-### Introdution Prefect
+### Introdution to Prefect
+
+We see how regular Python code can be converted into a Prefect script and we run our own Prefect server locally and run some script against the server. We use Prefect because it is flexible, open-source Python framework to turn standard pipelines into fault-tolerant dataflows.
 
 
+<a name="22"></a>
+#### Prefect Terminology
 
 
 **Batch model deployment** refers to deploying machine learning models to process a large batch or batch of data in a batch processing mode. This approach is suitable when you have a significant amount of data that needs to be processed in a batch, rather than in real-time or on-demand.
