@@ -28,6 +28,7 @@ This repo documents my understanding of MLOps. The structure of my notes are as 
     1. [Introdution to Workflow Orchestration](#20)
     2. [Introdution Prefect](#21)
         1. [Prefect Terminology](#22)
+    3. [Prefect Workflow](#23) 
     
 8. [Prerequisites (deployment and Docker)](#12)
 9. [References](#13)
@@ -562,6 +563,15 @@ We see how regular Python code can be converted into a Prefect script and we run
 
 <a name="22"></a>
 #### Prefect Terminology
+Basic building blocks of Prefect are tasks and flows:
+
++ Task: A discrete unit of work in a Prefect workflow. You can think of tasks as regular Python functions: they take input perform some work and produce output. 
++ FLow: Container for workflow logic. Flows can also be viewed as Python functions and theya re responsible for serving as container for workflow logic. 
++ Subflow: flow called by another flow
+A task has a task decorator and a flow has a flow decorator. These decorators are necessary when converting existing scripts into a Prefect workflow. 
+
+a name="23"></a>
+### Prefect Workflow
 
 
 **Batch model deployment** refers to deploying machine learning models to process a large batch or batch of data in a batch processing mode. This approach is suitable when you have a significant amount of data that needs to be processed in a batch, rather than in real-time or on-demand.
