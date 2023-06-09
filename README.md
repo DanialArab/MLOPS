@@ -574,7 +574,6 @@ A task has a task decorator and a flow has a flow decorator. These decorators ar
 a name="23"></a>
 ### Prefect Workflow
 
-
 **Batch model deployment** refers to deploying machine learning models to process a large batch or batch of data in a batch processing mode. This approach is suitable when you have a significant amount of data that needs to be processed in a batch, rather than in real-time or on-demand.
 
 It's important to note that batch model deployment is different from **real-time or online model deployment**, where predictions are made on individual instances as they arrive. Batch deployment is well-suited for scenarios where you have a large amount of data to process at once, such as data cleaning, feature extraction, or generating predictions for a historical dataset.
