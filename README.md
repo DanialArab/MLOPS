@@ -22,13 +22,13 @@ This repo documents my understanding of MLOps. The structure of my notes are as 
         8. [How to select the best model](#15)
     2. [Model management](#16)
     3. [Model registry](#17) 
-    
+    4. [MLflow: benefits, limitations and alternatives](#18)
+ 
+ 3. [Orchestration and ML Pipelines] (#19)
+    1. []()
     
 8. [Prerequisites (deployment and Docker)](#12)
 9. [References](#13)
-
-
-
 
 
 
@@ -537,6 +537,17 @@ The Model Registry component is a centralized model store, set of APIs, and a UI
 + Model versioning,
 + Stage transitions, and
 + Annotations
+
+
+<a name="18"></a>
+### MLflow: benefits, limitations and alternatives
+
+
+
+<a name="19"></a>
+## 19. Orchestration and ML Pipelines]
+
+
 
 
 
