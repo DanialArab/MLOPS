@@ -29,6 +29,7 @@ This repo documents my understanding of MLOps. The structure of my notes are as 
     2. [Introdution Prefect](#21)
         1. [Prefect Terminology](#22)
     3. [Prefect Workflow](#23) 
+    4. [Deploying Your Workflow](#24)
     
 8. [Prerequisites (deployment and Docker)](#12)
 9. [References](#13)
@@ -578,7 +579,10 @@ a name="23"></a>
 
 It's important to note that batch model deployment is different from **real-time or online model deployment**, where predictions are made on individual instances as they arrive. Batch deployment is well-suited for scenarios where you have a large amount of data to process at once, such as data cleaning, feature extraction, or generating predictions for a historical dataset.
 
+a name="24"></a>
+### Deploying Your Workflow
 
+HERE
 
 <a name="8"></a>
 ## 8. Prerequisites (deployment and Docker)
