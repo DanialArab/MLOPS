@@ -581,7 +581,8 @@ It's important to note that batch model deployment is different from **real-time
 <a name="24"></a>
 ### Deploying Your Workflow
 
-HERE
+
+
 
 <a name="8"></a>
 ## 8. Prerequisites (deployment and Docker)
