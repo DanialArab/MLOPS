@@ -219,8 +219,19 @@ requirements.txt includes
         xgboost
         fastparquet
         boto3
-        
-Some quick note:
+
+a quick note on the Jupyter kernel:
+
+If for some reason when I activate my conda env then go to Jupyter Notebook I cannot have my IPython kernel associated with my env I need to register the kernel with Jupyter, as follows:
+
+        conda activate exp-tracking-env
+        conda install ipykernel
+        python -m ipykernel install --user --name=exp-tracking-env
+        jupyter notebook 
+
+now when I go to the Jupyter Notebook --> Kernel --> Change Kernel: I have the option to switch the Kernel to exp-tracking-env where I installed all the dependencies using the requirements.txt file. 
+
+Some quick notes:
 
 + **hyperopt:**
 
