@@ -1,4 +1,4 @@
-# MLOps
+# MLOps 
 
 This repo documents my understanding of MLOps. The structure of my notes are as follows:
 
