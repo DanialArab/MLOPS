@@ -2,7 +2,7 @@
 
 This repo documents my understanding of MLOps. The structure of my notes are as follows:
 
-# Table of content
+# Table of content 
 
 1. [Introduction](#1)
     1. [What is MLOps](#2)
