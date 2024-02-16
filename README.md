@@ -44,7 +44,7 @@ This repo documents my understanding of MLOps. The structure of my notes are as 
 <a name="2"></b>
 ### What is MLOps
 
-+ MLOps is a set of best practises to put the machine learning model to production. 
++ MLOps is a set of best practices to put the machine learning model to production. 
 + The simplified version of an ML project is depicted in the following:
 
 ![](https://github.com/DanialArab/images/blob/main/MLOPS/ML%20project%20steps.png?raw=true)
