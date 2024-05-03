@@ -140,7 +140,7 @@ code used, the name of the user, etc.
 Experiment tracking is the process of keeping track of all the relevant information from an ML experiment, which includes:
 
 + Source code
-+ Environment
++ **Environment**
 + Data
 + Model
 + Hyperparameters
